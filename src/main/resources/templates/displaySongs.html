@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style type="text/css">
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+table {
+  width: 150%;
+  max-width: 1500px;
+  border-collapse: collapse;
+  margin: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+  width: 150px; /* Set a fixed width for all columns */
+}
+
+th {
+  background-color: #28a745;
+  color: #fff;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #e1f5fe;
+}
+
+audio {
+  width: 100%;
+}
+
+iframe {
+  height: 120px;
+  width: 1300px;
+  border: none;
+}
+
+</style>
+
+
+</head>
+<body>
+	<table border>
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Artist</th>
+				<th>Genre</th>
+				<th>Play</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="song:${songs}">
+				<td th:text="${song.name}"></td>
+				<td th:text="${song.artist}"></td>
+				<td th:text="${song.genre}"></td>
+				<td>
+				    <audio controls>
+						<source th:src="${song.link}" type="audio/mpeg" />
+					</audio>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
+</body>
+</html>

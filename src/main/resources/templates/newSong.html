@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+form {
+  background-color: #fff;
+  padding: 20px;
+  width: 100%;
+  max-width: 600px;
+  border: 2px solid #28a745;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  background-color: #28a745;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+input[type="submit"]:hover {
+  background-color: #218838;
+}
+
+</style>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form action ="addSong" method="post">
+<label>Song Name:</label>
+<input type="text" name="name"/>
+<br>
+<br>
+<label>Song Artist:</label>
+<input type="text" name="artist"/>
+<br>
+<br>
+<label>Song Genre:</label>
+<input type="text" name="genre"/>
+<br>
+<br>
+<label>Song Link:</label>
+<input type="text" name="link"/>
+<br>
+<br>
+<input type="submit" value ="ADD SONG"/>
+
+</form>
+
+</body>
+</html>
